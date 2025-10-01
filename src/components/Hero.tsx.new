@@ -13,7 +13,7 @@ const Hero = () => {
         className="fixed inset-0 w-screen h-screen object-cover z-0"
         style={{ minHeight: '100vh', minWidth: '100vw', opacity: '0.9' }}
       >
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/bgvideo.mp4" type="video/mp4" />
       </video>
 
       {/* Very light overlay for minimal text readability */}

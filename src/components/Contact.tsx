@@ -28,22 +28,37 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual Supabase integration)
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+      const submitData = new FormData();
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('subject', formData.subject);
+      submitData.append('message', formData.message);
+
+      const response = await fetch('https://formspree.io/f/mrbyqjew', {
+        method: 'POST',
+        body: submitData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       toast({
         title: "Error",
@@ -66,7 +81,7 @@ const Contact = () => {
         className="fixed inset-0 w-screen h-screen object-cover z-0"
         style={{ minHeight: '100vh', minWidth: '100vw', opacity: '0.9' }}
       >
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/bgvideo.mp4" type="video/mp4" />
       </video>
 
       {/* Very light overlay for minimal text readability */}
@@ -89,7 +104,7 @@ const Contact = () => {
             </h2>
           </div>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you!
+            Have a project in mind or just want to chat? I'd be happy to hear from you!
           </p>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6"></div>
         </div>
@@ -161,13 +176,12 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-white/90 font-medium">
-                        Your Name *
+                        Your Name
                       </Label>
                       <Input
                         id="name"
                         name="name"
                         type="text"
-                        required
                         value={formData.name}
                         onChange={handleChange}
                         className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary/50 backdrop-blur-sm"
@@ -177,13 +191,12 @@ const Contact = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-white/90 font-medium">
-                        Your Email *
+                        Your Email
                       </Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
-                        required
                         value={formData.email}
                         onChange={handleChange}
                         className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary/50 backdrop-blur-sm"
@@ -209,12 +222,11 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-white/90 font-medium">
-                      Your Message *
+                      Your Message
                     </Label>
                     <Textarea
                       id="message"
                       name="message"
-                      required
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
@@ -226,7 +238,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary/90 hover:bg-primary text-white hover:scale-105 transition-all duration-300 shadow-glow-sm hover:shadow-glow"
+                    className="w-full bg-purple hover:bg-purple/90 text-white hover:scale-105 transition-all duration-300 shadow-glow-sm hover:shadow-glow"
                     size="lg"
                   >
                                         {isSubmitting ? (
@@ -238,6 +250,30 @@ const Contact = () => {
                       </>
                     )}
                   </Button>
+                  
+                  {/* OR Separator */}
+                  <div className="flex items-center pt-4">
+                    <div className="flex-1 h-px bg-white/20"></div>
+                    <span className="px-4 text-white/60 font-medium">OR</span>
+                    <div className="flex-1 h-px bg-white/20"></div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-cyan/30 hover:border-cyan hover:bg-cyan/10 text-white transition-all duration-300"
+                      size="lg"
+                    >
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdnoFP-usy9ITNF_VQJ0OF32QOvTo67GNAIbZgH579TTkCeGg/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open Contact Form
+                      </a>
+                    </Button>
+                  </div>
                 </form>
               </div>
             </Card>

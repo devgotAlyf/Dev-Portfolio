@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DecryptedText from "@/components/DecryptedText";
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
         className="fixed inset-0 w-screen h-screen object-cover z-0"
         style={{ minHeight: '100vh', minWidth: '100vw', opacity: '0.9' }}
       >
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/bgvideo.mp4" type="video/mp4" />
       </video>
 
       {/* Very light overlay for minimal text readability */}
@@ -91,9 +92,16 @@ const Hero = () => {
             <a href="#projects" className="inline-block animate-fade-in delay-1000">
               <Button 
                 size="lg"
-                className="bg-primary/90 hover:bg-primary text-white hover:scale-105 transition-all duration-300 shadow-glow-sm hover:shadow-glow"
+                className="gradient-primary text-white hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-glow-sm hover:shadow-glow border-0"
               >
-                View My Work
+                <DecryptedText
+                  text="View My Work"
+                  animateOn="hover"
+                  sequential
+                  revealDirection="start"
+                  className=""
+                  encryptedClassName="opacity-70"
+                />
               </Button>
             </a>
           </div>

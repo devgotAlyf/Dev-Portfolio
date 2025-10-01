@@ -1,0 +1,28 @@
+.falling-text-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.falling-text-target {
+  color: white;
+  position: relative;
+}
+
+.falling-text-target .word {
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  white-space: pre;
+}
+
+.falling-text-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.highlighted {
+  color: #e879f9; /* Tailwind fuchsia-400 */
+}
+
+
+
