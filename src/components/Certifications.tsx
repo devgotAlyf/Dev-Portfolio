@@ -11,31 +11,31 @@ const Certifications = () => {
   const certifications: Certification[] = [
     {
       title: "J.P. Morgan - Software Engineering Job Simulation",
-      href: "https://www.theforage.com/simulations/jpmorgan/software-engineering-virtual-experience",
+      href: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_AQ6rX988JPZWoqH6a_1753983323450_completion_certificate.pdf",
       description:
         "Completed a simulation involving project setup, UI development, and integration with databases, gaining experience in scalable backend systems."
     },
     {
       title: "Data & Analytics Course by HP LIFE",
-      href: "https://www.life-global.org/learn",
+      href: "https://www.life-global.org/course/344-data-science-and-analytics",
       description:
         "Industry-recognized course covering core concepts in data science, analytics tools, and decision-making strategies."
     },
     {
       title: "Udemy - Automated Machine Learning for Beginners (Google & Apple)",
-      href: "https://www.udemy.com/course/automated-machine-learning-automl-for-beginners/",
+      href: "https://www.udemy.com/certificate/UC-faf8dce0-f72e-400b-8b66-077c64116322/",
       description:
         "Hands-on experience with AutoML tools, automating model selection, training, and deployment for real-world data problems."
     },
     {
       title: "Deloitte - Data Analytics Job Simulation",
-      href: "https://www.theforage.com/simulations/deloitte/data-analytics-virtual-experience",
+      href: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_AQ6rX988JPZWoqH6a_1753607378462_completion_certificate.pdf",
       description:
         "Focused on data analytics and forensic technology with tasks involving real-world business scenarios, data analysis, and investigative techniques."
     },
     {
       title: "GeeksforGeeks - AI Tools Skill Up",
-      href: "https://www.geeksforgeeks.org/courses/ai-tools-skillup",
+      href: "https://www.geeksforgeeks.org/certificate/b16c47eda6e8a6e4a56f91aa8ea54af6",
       description:
         "Practical exposure to AI tools and workflows to improve problem-solving efficiency, productivity, and industry relevance."
     }
