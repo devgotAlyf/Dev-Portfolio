@@ -15,17 +15,57 @@ const Projects = () => {
       featured: true
     },
     // Placeholder for future projects
-    {
-      title: "Coming Soon",
-      description: "More exciting projects are in development. Stay tuned for innovative solutions and creative implementations!",
-      technologies: ["React", "TypeScript", "Node.js"],
-      image: "/placeholder-project-2.jpg",
-      liveDemo: "#",
-      sourceCode: "#",
-      featured: false
-    }
-  ];
+ {/* DocSpot Project */}
+<div className="rounded-2xl border border-white/10 bg-gradient-to-br from-purple-900/40 to-black/40 backdrop-blur-md shadow-lg p-6">
 
+  {/* Image */}
+  <img
+    src="/docspot.png"
+    alt="DocSpot"
+    className="rounded-xl mb-4 w-full h-56 object-cover"
+  />
+
+  {/* Title */}
+  <h3 className="text-xl font-semibold mb-2">
+    DocSpot – Doctor Appointment Platform
+  </h3>
+
+  {/* Description */}
+  <p className="text-gray-400 mb-4">
+    A full-stack healthcare platform that allows users to search doctors,
+    book appointments, and manage medical records with a clean and responsive UI.
+  </p>
+
+  {/* Tech Stack */}
+  <div className="flex flex-wrap gap-2 mb-4">
+    {["React", "Tailwind CSS", "Supabase", "Node.js", "JavaScript"].map((tech) => (
+      <span key={tech} className="text-xs px-3 py-1 bg-white/10 rounded-full">
+        {tech}
+      </span>
+    ))}
+  </div>
+
+  {/* Buttons */}
+  <div className="flex gap-4">
+    <a
+      href="https://doc-spot-web.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex-1 text-center border border-purple-500 py-2 rounded-lg hover:bg-purple-500/20 transition"
+    >
+      🔗 Live Demo
+    </a>
+
+    <a
+      href="https://github.com/devgotAlyf/DocSpot"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex-1 text-center border border-cyan-500 py-2 rounded-lg hover:bg-cyan-500/20 transition"
+    >
+      💻 View Code
+    </a>
+  </div>
+</div>
   return (
     <section 
       id="projects" 
@@ -139,7 +179,39 @@ const Projects = () => {
             </Card>
           ))}
         </div>
+{/* 3️⃣ Coming Soon (KEEP THIS) */}
+  <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-black/60 to-black/30 backdrop-blur-md shadow-lg p-6 flex flex-col justify-between">
 
+    <div>
+      <h3 className="text-xl font-semibold mb-2 text-center">
+        Coming Soon
+      </h3>
+
+      <p className="text-gray-400 mb-4 text-center">
+        More exciting projects are in development. Stay tuned for innovative
+        solutions and creative implementations!
+      </p>
+
+      <div className="flex flex-wrap justify-center gap-2 mb-4">
+        {["React", "TypeScript", "Node.js"].map((tech) => (
+          <span key={tech} className="text-xs px-3 py-1 bg-white/10 rounded-full">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div className="flex gap-4 mt-auto">
+      <button className="flex-1 border border-purple-500 py-2 rounded-lg opacity-50 cursor-not-allowed">
+        🔗 Live Demo
+      </button>
+
+      <button className="flex-1 border border-cyan-500 py-2 rounded-lg opacity-50 cursor-not-allowed">
+        💻 View Code
+      </button>
+    </div>
+  </div>
+</div>
         {/* Additional Projects Coming Soon */}
         <div className="text-center mt-16">
           <div className="max-w-md mx-auto">
