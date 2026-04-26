@@ -44,7 +44,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center items-center space-x-6 animate-fade-in delay-700">
             <a
-              href="https://www.linkedin.com/in/dev-pratap-srivastava-991811294"
+              href="https://www.linkedin.com/in/dev-pratap-srivastava"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
