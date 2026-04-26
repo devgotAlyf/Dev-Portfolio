@@ -139,7 +139,7 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-white/90">LinkedIn</p>
                         <a 
-                          href="https://www.linkedin.com/in/dev-pratap-srivastava-991811294"
+                          href="https://www.linkedin.com/in/dev-pratap-srivastava"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-cyan hover:text-cyan/80 transition-colors duration-300"
