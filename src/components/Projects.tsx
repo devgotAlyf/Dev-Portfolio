@@ -15,6 +15,27 @@ type Project = {
 
 const Projects = () => {
   const projects: Project[] = [
+    
+      // 👉 DocSpot (now secondary)
+    {
+      title: "DocSpot – Doctor Appointment Platform",
+      description:
+        "A full-stack healthcare platform that allows users to search doctors, book appointments, and manage medical records with a clean and responsive UI.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Supabase",
+        "Node.js",
+        "JavaScript",
+      ],
+      image: "/docspot.png",
+      liveDemo: "https://doc-spot-web.vercel.app/",
+      sourceCode: "https://github.com/devgotAlyf/DocSpot",
+      featured: false,
+    },
+  ];
+
+    
     // 🔥 Ledger FIRST (FEATURED)
     {
       title: "Ledger — Autonomous Backend Audit System",
@@ -54,25 +75,6 @@ const Projects = () => {
       sourceCode: "https://github.com/devgotAlyf/builderzcareer",
       featured: false,
     },
-
-    // 👉 DocSpot (now secondary)
-    {
-      title: "DocSpot – Doctor Appointment Platform",
-      description:
-        "A full-stack healthcare platform that allows users to search doctors, book appointments, and manage medical records with a clean and responsive UI.",
-      technologies: [
-        "React",
-        "Tailwind CSS",
-        "Supabase",
-        "Node.js",
-        "JavaScript",
-      ],
-      image: "/docspot.png",
-      liveDemo: "https://doc-spot-web.vercel.app/",
-      sourceCode: "https://github.com/devgotAlyf/DocSpot",
-      featured: false,
-    },
-  ];
 
   return (
     <section id="projects" className="relative min-h-screen py-20">
