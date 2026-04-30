@@ -6,13 +6,13 @@ const Skills = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Java", "JavaScript", "TypeScript", "Kotlin", "MySQL"],
+      skills: ["Java", "JavaScript", "TypeScript", "MySQL", "PostgreSQL", "Kafka" , "Springboot"],
       color: "purple"
     },
     {
-      title: "Web Development",
+      title: "Full-Stack Development",
       icon: Database,
-      skills: ["HTML", "Tailwind CSS", "Advanced JavaScript"],
+      skills: ["Node.Js", "Tailwind CSS", "Advanced JavaScript", "ReactJS", "MERN", "MongoDB"],
       color: "cyan"
     },
     {
