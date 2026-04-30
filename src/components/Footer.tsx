@@ -23,7 +23,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex justify-center items-center space-x-4">
               <a
-                href="https://www.linkedin.com/in/dev-pratap-srivastava-991811294"
+                href="https://www.linkedin.com/in/dev-pratap-srivastava"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
@@ -66,19 +66,7 @@ const Footer = () => {
                 </Button>
               </a>
             </div>
-            
-            {/* Project Links */}
-            <div className="flex justify-center items-center space-x-4">
-              <a
-                href="https://careerbuilderz.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 transition-colors duration-300 font-medium"
-              >
-                Visit CareerBuilderz
-              </a>
-            </div>
-
+          
             {/* Copyright */}
             <div className="border-t border-border pt-8">
               <p className="text-muted-foreground flex items-center justify-center">
