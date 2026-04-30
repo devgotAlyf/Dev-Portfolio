@@ -15,8 +15,7 @@ type Project = {
 
 const Projects = () => {
   const projects: Project[] = [
-    
-      // 👉 DocSpot (now secondary)
+    // 🔥 DocSpot FIRST (FEATURED)
     {
       title: "DocSpot – Doctor Appointment Platform",
       description:
@@ -31,12 +30,10 @@ const Projects = () => {
       image: "/docspot.png",
       liveDemo: "https://doc-spot-web.vercel.app/",
       sourceCode: "https://github.com/devgotAlyf/DocSpot",
-      featured: false,
+      featured: true,
     },
-  ];
 
-    
-    // 🔥 Ledger FIRST (FEATURED)
+    // 👉 Ledger SECOND
     {
       title: "Ledger — Autonomous Backend Audit System",
       description:
@@ -53,10 +50,10 @@ const Projects = () => {
       image: "/ledger.png",
       liveDemo: "https://ledger-2qwo.onrender.com/",
       sourceCode: "https://github.com/devgotAlyf/Ledger",
-      featured: true,
+      featured: false,
     },
 
-    // 👉 CareerBuilderz
+    // 👉 CareerBuilderz THIRD
     {
       title: "CareerBuilderz - Resume Builder & Job Finder",
       description:
@@ -75,6 +72,7 @@ const Projects = () => {
       sourceCode: "https://github.com/devgotAlyf/builderzcareer",
       featured: false,
     },
+  ];
 
   return (
     <section id="projects" className="relative min-h-screen py-20">
