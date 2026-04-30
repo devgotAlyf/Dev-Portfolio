@@ -15,25 +15,27 @@ type Project = {
 
 const Projects = () => {
   const projects: Project[] = [
-    // 🔥 DocSpot FIRST (FEATURED)
+    // 🔥 Ledger FIRST (FEATURED)
     {
-      title: "DocSpot – Doctor Appointment Platform",
+      title: "Ledger — Autonomous Backend Audit System",
       description:
-        "A full-stack healthcare platform that allows users to search doctors, book appointments, and manage medical records with a clean and responsive UI.",
+        "A Spring Boot backend for event-driven transaction auditing. It stores transactions as append-only events in PostgreSQL, processes them asynchronously through Kafka, uses Redis for idempotent consumer protection, and applies AI-based audit decisions to mark transactions as APPROVED or FLAGGED. Includes Swagger UI for API testing and deployed on Render.",
       technologies: [
-        "React",
-        "Tailwind CSS",
-        "Supabase",
-        "Node.js",
-        "JavaScript",
+        "Java",
+        "Spring Boot",
+        "Apache Kafka",
+        "PostgreSQL",
+        "Redis",
+        "Swagger",
+        "Render",
       ],
-      image: "/docspot.png",
-      liveDemo: "https://doc-spot-web.vercel.app/",
-      sourceCode: "https://github.com/devgotAlyf/DocSpot",
-      featured: true, // ✅ BIG CARD
+      image: "/ledger.png",
+      liveDemo: "https://ledger-2qwo.onrender.com/",
+      sourceCode: "https://github.com/devgotAlyf/Ledger",
+      featured: true,
     },
 
-    // 👉 Secondary project
+    // 👉 CareerBuilderz
     {
       title: "CareerBuilderz - Resume Builder & Job Finder",
       description:
@@ -50,6 +52,24 @@ const Projects = () => {
       image: "/career.png",
       liveDemo: "https://careerbuilderz.vercel.app/",
       sourceCode: "https://github.com/devgotAlyf/builderzcareer",
+      featured: false,
+    },
+
+    // 👉 DocSpot (now secondary)
+    {
+      title: "DocSpot – Doctor Appointment Platform",
+      description:
+        "A full-stack healthcare platform that allows users to search doctors, book appointments, and manage medical records with a clean and responsive UI.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Supabase",
+        "Node.js",
+        "JavaScript",
+      ],
+      image: "/docspot.png",
+      liveDemo: "https://doc-spot-web.vercel.app/",
+      sourceCode: "https://github.com/devgotAlyf/DocSpot",
       featured: false,
     },
   ];
@@ -84,7 +104,7 @@ const Projects = () => {
                 hover:-translate-y-3 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]
                 ${project.featured ? "lg:col-span-3" : ""}`}
               >
-                {/* 🔥 Glow Effect */}
+                {/* Glow Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-pink-500/10 blur-xl"></div>
 
                 {/* Image */}
