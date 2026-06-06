@@ -5,23 +5,27 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-background/95 border-t border-border backdrop-blur-sm relative z-50">
+    <footer className="py-12 bg-black border-t border-yellow-500/20 relative z-50">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
+
           {/* Main Footer Content */}
           <div className="text-center space-y-8">
+
             {/* Logo/Name */}
             <div>
-              <h3 className="text-2xl font-bold text-opacity-90 mb-2">
+              <h3 className="text-2xl font-bold text-white mb-2">
                 Dev Pratap Srivastava
               </h3>
-              <p className="text-muted-foreground">
+
+              <p className="text-yellow-400/80">
                 Building the future, one line of code at a time
               </p>
             </div>
 
             {/* Social Links */}
             <div className="flex justify-center items-center space-x-4">
+
               <a
                 href="https://www.linkedin.com/in/dev-pratap-srivastava"
                 target="_blank"
@@ -31,9 +35,9 @@ const Footer = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-10 h-10 rounded-full border-purple/30 hover:border-purple hover:bg-purple/10 transition-all duration-300"
+                  className="w-10 h-10 rounded-full border-yellow-500/30 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300"
                 >
-                  <Linkedin className="w-4 h-4 text-purple group-hover:scale-110 transition-transform duration-300" />
+                  <Linkedin className="w-4 h-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
                 </Button>
               </a>
 
@@ -47,9 +51,9 @@ const Footer = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-10 h-10 rounded-full border-cyan/30 hover:border-cyan hover:bg-cyan/10 transition-all duration-300"
+                  className="w-10 h-10 rounded-full border-yellow-500/30 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300"
                 >
-                  <Github className="w-4 h-4 text-cyan group-hover:scale-110 transition-transform duration-300" />
+                  <Github className="w-4 h-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
                 </Button>
               </a>
 
@@ -60,28 +64,36 @@ const Footer = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-10 h-10 rounded-full border-pink/30 hover:border-pink hover:bg-pink/10 transition-all duration-300"
+                  className="w-10 h-10 rounded-full border-yellow-500/30 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300"
                 >
-                  <Mail className="w-4 h-4 text-pink group-hover:scale-110 transition-transform duration-300" />
+                  <Mail className="w-4 h-4 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
                 </Button>
               </a>
+
             </div>
-          
+
             {/* Copyright */}
-            <div className="border-t border-border pt-8">
-              <p className="text-muted-foreground flex items-center justify-center">
-                <span>© {currentYear} Designed & Built by Dev Pratap Srivastava</span>
-                <Heart className="w-4 h-4 text-pink mx-2 animate-pulse" />
+            <div className="border-t border-yellow-500/20 pt-8">
+              <p className="text-white/80 flex items-center justify-center">
+                <span>
+                  © {currentYear} Designed & Built by Dev Pratap Srivastava
+                </span>
+
+                <Heart className="w-4 h-4 text-yellow-400 mx-2 animate-pulse" />
+
                 <span>with passion</span>
               </p>
             </div>
+
           </div>
 
           {/* Decorative Elements */}
           <div className="relative mt-8 overflow-hidden">
-            <div className="absolute -top-4 left-1/4 w-16 h-16 rounded-full bg-purple/5 animate-float"></div>
-            <div className="absolute -top-4 right-1/4 w-12 h-12 rounded-full bg-cyan/5 animate-float-delayed"></div>
+            <div className="absolute -top-4 left-1/4 w-16 h-16 rounded-full bg-yellow-400/5 animate-float"></div>
+
+            <div className="absolute -top-4 right-1/4 w-12 h-12 rounded-full bg-yellow-400/5 animate-float-delayed"></div>
           </div>
+
         </div>
       </div>
     </footer>
