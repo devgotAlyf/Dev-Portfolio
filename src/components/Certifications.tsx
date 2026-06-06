@@ -43,29 +43,35 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="relative min-h-screen py-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/85 to-black/90 z-0" />
+      {/* Black Background */}
+      <div className="absolute inset-0 bg-black z-0" />
 
       <div className="container mx-auto px-6 relative z-20">
-        <div className="max-w-6xl mx-auto bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl border-2 border-white/30 shadow-glow hover:shadow-glow-lg transition-all duration-500 rounded-[2rem] p-12">
+        <div className="max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-[2rem] p-12">
+
           {/* Section Title */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Award className="w-8 h-8 text-primary mr-3" />
-              <h2 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-r from-purple via-cyan to-pink bg-clip-text">
+              <Award className="w-8 h-8 text-yellow-400 mr-3" />
+
+              <h2 className="text-4xl md:text-5xl font-bold text-yellow-400">
                 Certifications
               </h2>
             </div>
+
             <p className="text-lg text-white/95 font-semibold max-w-2xl mx-auto">
               Courses and simulations that strengthened my practical skills
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple via-cyan to-pink mx-auto rounded-full mt-6"></div>
+
+            <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mt-6"></div>
           </div>
 
+          {/* Certifications List */}
           <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
             {certifications.map((cert) => (
               <Card
                 key={cert.title}
-                className="group bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-xl border-2 border-white/30 shadow-glow hover:shadow-glow-lg transition-all duration-500 transform hover:-translate-y-2"
+                className="group bg-black border-2 border-yellow-500/20 hover:shadow-[0_0_35px_rgba(250,204,21,0.4)] transition-all duration-500 transform hover:-translate-y-2"
               >
                 <div className="p-6">
                   <a
@@ -75,10 +81,11 @@ const Certifications = () => {
                     className="text-left block"
                   >
                     <div className="text-white">
-                      <span className="font-bold text-lg underline decoration-purple/60 underline-offset-4 hover:text-purple transition-colors duration-300">
+                      <span className="font-bold text-lg underline decoration-yellow-400/60 underline-offset-4 hover:text-yellow-400 transition-colors duration-300">
                         {cert.title}
                       </span>
                     </div>
+
                     <p className="mt-2 text-white/95 font-medium">
                       {cert.description}
                     </p>
@@ -87,6 +94,7 @@ const Certifications = () => {
               </Card>
             ))}
           </div>
+
         </div>
       </div>
     </section>
@@ -94,6 +102,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-
-
-
