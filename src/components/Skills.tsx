@@ -1,3 +1,4 @@
+
 import { Code, Database, Wrench, BookOpen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -6,61 +7,76 @@ const Skills = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Java", "JavaScript", "TypeScript", "MySQL", "PostgreSQL", "Kafka" , "Springboot"],
-      color: "purple"
+      skills: [
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "MySQL",
+        "PostgreSQL",
+        "Kafka",
+        "Springboot",
+      ],
     },
     {
       title: "Full-Stack Development",
       icon: Database,
-      skills: ["Node.Js", "Tailwind CSS", "Advanced JavaScript", "ReactJS", "MERN", "MongoDB"],
-      color: "cyan"
+      skills: [
+        "Node.Js",
+        "Tailwind CSS",
+        "Advanced JavaScript",
+        "ReactJS",
+        "MERN",
+        "MongoDB",
+      ],
     },
     {
       title: "Tools & Platforms",
       icon: Wrench,
-      skills: ["Git", "GitHub", "VS Code", "Figma", "IntelliJ-Idea", "Google Cloud AutoML (Vertex)"],
-      color: "pink"
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "IntelliJ-Idea",
+        "Google Cloud AutoML (Vertex)",
+      ],
     },
     {
       title: "CS Fundamentals",
       icon: BookOpen,
-      skills: ["Data Structures & Algorithms", "OOP", "OS", "DBMS", "Computer Networks"],
-      color: "orange"
-    }
+      skills: [
+        "Data Structures & Algorithms",
+        "OOP",
+        "OS",
+        "DBMS",
+        "Computer Networks",
+      ],
+    },
   ];
 
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      purple: "border-purple/30 hover:border-purple hover:bg-purple/5 group-hover:text-purple",
-      cyan: "border-cyan/30 hover:border-cyan hover:bg-cyan/5 group-hover:text-cyan",
-      pink: "border-pink/30 hover:border-pink hover:bg-pink/5 group-hover:text-pink",
-      orange: "border-orange/30 hover:border-orange hover:bg-orange/5 group-hover:text-orange"
-    };
-    return colorMap[color as keyof typeof colorMap] || colorMap.purple;
-  };
-
   return (
-      <section 
-        id="skills" 
-        className="relative min-h-screen py-20"
-      >
-        {/* Dark overlay to separate from background video */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/85 to-black/90 z-0"></div>
-        
-        <div className="container mx-auto px-6 relative z-20">
-          <div className="max-w-6xl mx-auto bg-gradient-to-br from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl border-2 border-white/30 shadow-glow hover:shadow-glow-lg transition-all duration-500 rounded-[2rem] p-12">
-            {/* Section Title */}
-            <div className="text-center mb-16">
+    <section id="skills" className="relative min-h-screen py-20">
+      {/* Black Background */}
+      <div className="absolute inset-0 bg-black z-0"></div>
+
+      <div className="container mx-auto px-6 relative z-20">
+        <div className="max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-[2rem] p-12">
+
+          {/* Section Title */}
+          <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Code className="w-8 h-8 text-primary mr-3" />
-              <h2 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-r from-purple via-cyan to-pink bg-clip-text">
+              <Code className="w-8 h-8 text-yellow-400 mr-3" />
+
+              <h2 className="text-4xl md:text-5xl font-bold text-yellow-400">
                 My Tech Toolbox
               </h2>
             </div>
+
             <p className="text-lg text-white/95 font-semibold max-w-2xl mx-auto">
               A collection of technologies and tools I use to bring ideas to life
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple via-cyan to-pink mx-auto rounded-full mt-6"></div>
+
+            <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mt-6"></div>
           </div>
 
           {/* Skills Grid */}
@@ -68,14 +84,16 @@ const Skills = () => {
             {skillCategories.map((category) => (
               <Card
                 key={category.title}
-                className="group bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-xl border-2 border-white/30 shadow-glow hover:shadow-glow-lg transition-all duration-500 transform hover:-translate-y-2"
+                className="group bg-black border-2 border-yellow-500/20 hover:shadow-[0_0_35px_rgba(250,204,21,0.4)] transition-all duration-500 transform hover:-translate-y-2"
               >
                 <div className="p-6">
+
                   {/* Category Header */}
                   <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-full border-2 ${getColorClasses(category.color)} flex items-center justify-center transition-colors duration-300 bg-black/50`}>
-                      <category.icon className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 rounded-full border-2 border-yellow-500/30 flex items-center justify-center bg-black/50 transition-all duration-300">
+                      <category.icon className="w-6 h-6 text-yellow-400" />
                     </div>
+
                     <h3 className="text-xl font-bold ml-3 text-white">
                       {category.title}
                     </h3>
@@ -88,23 +106,20 @@ const Skills = () => {
                         key={skill}
                         className="text-white/95 font-medium flex items-center"
                       >
-                        <div className={`w-2 h-2 rounded-full mr-2 ${
-                          category.color === 'purple' ? 'bg-purple' : 
-                          category.color === 'cyan' ? 'bg-cyan' : 
-                          category.color === 'pink' ? 'bg-pink' : 
-                          'bg-orange'
-                        }`}></div>
+                        <div className="w-2 h-2 rounded-full mr-2 bg-yellow-400"></div>
                         {skill}
                       </li>
                     ))}
                   </ul>
+
                 </div>
               </Card>
             ))}
           </div>
-          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 
