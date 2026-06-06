@@ -1,4 +1,4 @@
-```tsx
+
 import { GraduationCap, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -154,4 +154,3 @@ const Education = () => {
 };
 
 export default Education;
-```
