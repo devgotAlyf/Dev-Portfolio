@@ -42,19 +42,22 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="relative min-h-screen py-20">
+    <section
+  id="certifications"
+  className="relative min-h-[100svh] md:min-h-screen py-14 sm:py-20"
+>
       {/* Black Background */}
       <div className="absolute inset-0 bg-black z-0" />
 
-      <div className="container mx-auto px-6 relative z-20">
-        <div className="max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-[2rem] p-12">
+      <div className="container mx-auto w-full px-4 sm:px-6 relative z-20">
+        <div className="w-full max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-8 md:p-12">
 
           {/* Section Title */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <Award className="w-8 h-8 text-yellow-400 mr-3" />
 
-              <h2 className="text-4xl md:text-5xl font-bold text-yellow-400">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-yellow-400">
                 Certifications
               </h2>
             </div>
@@ -73,7 +76,7 @@ const Certifications = () => {
                 key={cert.title}
                 className="group bg-black border-2 border-yellow-500/20 hover:shadow-[0_0_35px_rgba(250,204,21,0.4)] transition-all duration-500 transform hover:-translate-y-2"
               >
-                <div className="p-6">
+                <div className="p-5 sm:p-6">
                   <a
                     href={cert.href}
                     target="_blank"
@@ -86,7 +89,7 @@ const Certifications = () => {
                       </span>
                     </div>
 
-                    <p className="mt-2 text-white/95 font-medium">
+                    <p className="mt-2 text-sm sm:text-base text-white/95 font-medium leading-relaxed">
                       {cert.description}
                     </p>
                   </a>
