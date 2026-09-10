@@ -26,20 +26,20 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-yellow-500/20">
-      <div className="container mx-auto px-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black border-b border-yellow-500/20">
+      <div className="container mx-auto w-full px-4 sm:px-6">
 
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex min-w-0 items-center space-x-2">
             <img
               src="/download.jpg"
               alt="Logo"
               className="w-6 h-7"
             />
 
-            <span className="text-xl font-bold text-white">
+            <span className="text-lg sm:text-xl font-bold text-white truncate">
               Dev-Folio
             </span>
           </div>
