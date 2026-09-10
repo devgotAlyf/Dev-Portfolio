@@ -115,15 +115,48 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: Goldman, Arial, sans-serif;
   }
-}
 
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow-x: hidden;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+
+  a {
+    overflow-wrap: anywhere;
+  }
+
+  button,
+  input,
+  textarea {
+    max-width: 100%;
+  }
+}
 @layer utilities {
   .gradient-primary {
     background: var(--gradient-primary);
