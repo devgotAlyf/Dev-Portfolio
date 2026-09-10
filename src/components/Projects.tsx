@@ -74,17 +74,20 @@ const Projects = () => {
     },
   ];
 return (
-  <section id="projects" className="relative min-h-screen py-20">
+  <section
+  id="projects"
+  className="relative min-h-[100svh] md:min-h-screen py-14 sm:py-20"
+>
     <div className="absolute inset-0 bg-black z-0" />
 
-    <div className="container mx-auto px-6 relative z-20">
-      <div className="max-w-6xl mx-auto bg-black backdrop-blur-xl border border-yellow-500/20 rounded-[2rem] p-12">
+    <div className="container mx-auto w-full px-4 sm:px-6 relative z-20">
+      <div className="w-full max-w-6xl mx-auto bg-black backdrop-blur-xl border border-yellow-500/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-8 md:p-12">
 
         {/* Title */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
             <FolderOpen className="w-8 h-8 text-yellow-400 mr-3" />
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-white">
               Things I've Built
             </h2>
           </div>
@@ -94,17 +97,17 @@ return (
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {projects.map((project) => (
             <Card
               key={project.title}
               className={`group relative bg-black border border-yellow-500/20 transition-all duration-500 overflow-hidden
               hover:-translate-y-3 hover:shadow-[0_0_40px_rgba(250,204,21,0.6)]
-              ${project.featured ? "lg:col-span-3" : ""}`}
+              ${project.featured ? "md:col-span-2 lg:col-span-3" : ""}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-yellow-400/20 blur-xl"></div>
 
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-52 sm:h-64 overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.image})` }}
@@ -135,7 +138,7 @@ return (
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <a
                     href={project.liveDemo}
                     target="_blank"
