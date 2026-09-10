@@ -5,11 +5,11 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="relative min-h-screen py-20">
+    <div className="relative min-h-[100svh] md:min-h-screen py-14 sm:py-20">
       {/* Dark overlay to separate from background video */}
       <div className="absolute inset-0"></div>
 
-      <div className="container mx-auto px-6 relative z-20">
+      <div className="container mx-auto w-full px-4 sm:px-6 relative z-20">
         <div className="max-w-4xl mx-auto">
 
           {/* Section Title */}
@@ -25,18 +25,18 @@ const About = () => {
           </div>
 
           <Card className="bg-black/80 border-2 border-white/20 shadow-glow hover:shadow-glow-lg transition-all duration-500 transform hover:-translate-y-2">
-            <div className="p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="p-5 sm:p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
 
                 {/* Content */}
                 <div className="space-y-6">
-                  <p className="text-lg leading-relaxed text-white/90 font-medium">
+                  <p className="text-base sm:text-lg leading-relaxed text-white/90 font-medium">
                     I am an Electronics undergraduate with hands-on expertise in software development.
                     I'm seeking to apply my robust problem-solving abilities and a genuine passion for
                     building elegant software solutions in an entry-level engineering position.
                   </p>
 
-                  <p className="text-lg leading-relaxed text-white/90 font-medium">
+                  <p className="text-base sm:text-lg leading-relaxed text-white/90 font-medium">
                     I thrive in collaborative environments and I'm always eager to learn and adapt
                     to new technologies. My goal is to create meaningful digital experiences that
                     make a real impact.
@@ -62,7 +62,7 @@ const About = () => {
 
                 {/* Visual Element */}
                 <div className="relative">
-                  <div className="relative w-full h-80 rounded-2xl bg-black border-2 border-white/30 overflow-hidden">
+                  <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl bg-black border-2 border-white/30 overflow-hidden">
 
                     {/* Resume Preview */}
                     <div className="absolute inset-0 z-0 opacity-100">
