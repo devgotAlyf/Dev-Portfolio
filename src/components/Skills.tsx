@@ -55,19 +55,22 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="relative min-h-screen py-20">
+    <section
+  id="skills"
+  className="relative min-h-[100svh] md:min-h-screen py-14 sm:py-20"
+>
       {/* Black Background */}
       <div className="absolute inset-0 bg-black z-0"></div>
 
-      <div className="container mx-auto px-6 relative z-20">
-        <div className="max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-[2rem] p-12">
+      <div className="container mx-auto w-full px-4 sm:px-6 relative z-20">
+        <div className="w-full max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-8 md:p-12">
 
           {/* Section Title */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <Code className="w-8 h-8 text-yellow-400 mr-3" />
 
-              <h2 className="text-4xl md:text-5xl font-bold text-yellow-400">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-yellow-400">
                 My Tech Toolbox
               </h2>
             </div>
@@ -80,7 +83,7 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
             {skillCategories.map((category) => (
               <Card
                 key={category.title}
@@ -89,12 +92,12 @@ const Skills = () => {
                 <div className="p-6">
 
                   {/* Category Header */}
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center min-w-0 mb-4">
                     <div className="w-12 h-12 rounded-full border-2 border-yellow-500/30 flex items-center justify-center bg-black/50 transition-all duration-300">
                       <category.icon className="w-6 h-6 text-yellow-400" />
                     </div>
 
-                    <h3 className="text-xl font-bold ml-3 text-white">
+                    <h3 className="text-lg sm:text-xl font-bold ml-3 text-white break-words">
                       {category.title}
                     </h3>
                   </div>
