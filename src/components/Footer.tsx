@@ -5,8 +5,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-black border-t border-yellow-500/20 relative z-50">
-      <div className="container mx-auto px-6">
+    <footer className="py-10 sm:py-12 bg-black border-t border-yellow-500/20 relative z-50">
+      <div className="container mx-auto w-full px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
 
           {/* Main Footer Content */}
@@ -74,7 +74,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="border-t border-yellow-500/20 pt-8">
-              <p className="text-white/80 flex items-center justify-center">
+              <p className="text-white/80 flex flex-wrap items-center justify-center text-center leading-relaxed">
                 <span>
                   © {currentYear} Designed & Built by Dev Pratap Srivastava
                 </span>
