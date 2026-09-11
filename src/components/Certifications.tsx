@@ -41,8 +41,7 @@ const Certifications = () => {
     }
   ];
 
-  return (
-    <section
+<section
   id="certifications"
   className="relative min-h-[100svh] md:min-h-screen py-14 sm:py-20"
 >
