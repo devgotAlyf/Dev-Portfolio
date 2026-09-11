@@ -31,11 +31,14 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="relative min-h-screen py-20">
+    <section
+  id="education"
+  className="relative min-h-[100svh] md:min-h-screen py-14 sm:py-20"
+>
       <div className="absolute inset-0 bg-black z-0"></div>
 
-      <div className="container mx-auto px-6 relative z-20">
-        <div className="max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-[2rem] p-12">
+      <div className="container mx-auto w-full px-4 sm:px-6 relative z-20">
+        <div className="w-full max-w-6xl mx-auto bg-black backdrop-blur-xl border-2 border-yellow-500/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-8 md:p-12">
 
           {/* Section Title */}
           <div className="text-center mb-16">
@@ -59,7 +62,7 @@ const Education = () => {
             <div className="relative">
 
               {/* Timeline Line */}
-              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-yellow-400/40 transform md:-translate-x-1/2"></div>
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-yellow-400/40 transform md:-translate-x-1/2"></div>
 
               {educationData.map((item, index) => (
                 <div
@@ -69,11 +72,11 @@ const Education = () => {
                   }`}
                 >
                   {/* Timeline Node */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-yellow-400 rounded-full transform -translate-x-1/2 border-4 border-black shadow-lg z-10"></div>
+                  <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-yellow-400 rounded-full transform -translate-x-1/2 border-4 border-black shadow-lg z-10"></div>
 
                   {/* Content Card */}
                   <div
-                    className={`w-full md:w-5/12 ml-16 md:ml-0 ${
+                    className={`w-full md:w-5/12 ml-10 sm:ml-12 md:ml-0 ${
                       index % 2 === 0
                         ? "md:mr-auto md:pr-8"
                         : "md:ml-auto md:pl-8"
@@ -83,13 +86,13 @@ const Education = () => {
                       <div className="p-6">
 
                         {/* Institution Header */}
-                        <div className="flex items-start justify-between mb-4">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-4">
                           <div>
-                            <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">
+                            <h3 className="text-lg sm:text-xl font-bold break-words text-white group-hover:text-yellow-400 transition-colors duration-300">
                               {item.institution}
                             </h3>
 
-                            <p className="text-lg font-medium text-yellow-400">
+                            <p className="text-base sm:text-lg font-medium text-yellow-400">
                               {item.degree}
                             </p>
                           </div>
